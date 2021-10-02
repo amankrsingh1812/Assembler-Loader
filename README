@@ -1,0 +1,16 @@
+The file "opcodeTomachinecode.txt" stores mnemonic operation codes and their respective machine language equivalent. This is used to create OPTAB while program runs
+Assembler Source program is in Assembler.cpp and Loader Source program is in Loader.cpp
+The Input file is assumed to be fixed field file that is 10 columns for LABEL, 10 columns for OPCODE, 30 columns for OPERAND
+The program is expected to work on a Linux system, preferably Ubuntu 18.04 and above, with g++ version 9.3.0  
+
+Steps to Run:
+1.To compile use the command: bash ./compile.sh
+2.After compilation, 
+    to run Assembler use the command: ./Assembler INPUT.txt
+    after running Assembler to run Loader use the command: ./Loader INPUT.txt INPUT_Intermediate
+
+Output Notes:
+1.The generated file "INPUT_Intermediate" is the intermediate file generated durring pass 1 of Assembler
+2.The final output of Assembler will be stored in file named "INPUT_objectProgram"
+3.The final output of Loader will be stored in file named "INPUT_objectProgram_loaderFile"
+4.Loader makes use of intermediate file
